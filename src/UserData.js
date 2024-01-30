@@ -57,7 +57,7 @@ const UserData = ({users}) => {
                       <button className='reply-btn' onClick={replyBtnHit} 
                       value={item.stuid}>Reply
                       </button>
-                      </td>
+                    </td>
                 </tr>
             )
         })

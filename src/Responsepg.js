@@ -1,4 +1,4 @@
-import { selectStuid, selectUser } from './Redux/StuSlice'
+import { selectStuid } from './Redux/StuSlice'
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
 import React from 'react'
@@ -15,7 +15,7 @@ const Responsepg = () => {
   let url=`http://localhost:4000/Complaints?stuid=${stid}`;
 
   axios.get(url).then((res)=>{
-    // console.log(res.data[0])
+
     if(res.data.length==1){
       if(res.data[0].response!=""){
         let r=res.data[0].response;
@@ -31,6 +31,7 @@ const Responsepg = () => {
       setYourComplaint(c)
       setComId(id)
     }
+
     else{
       console.log(res.data.length)
     }

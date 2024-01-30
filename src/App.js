@@ -12,6 +12,7 @@ import AdminContent from "./AdminContent";
 import Complaintspg from "./Complaintspg";
 import Replypg from "./Replypg";
 import Responsepg from "./Responsepg";
+import StudentRec from "./StudentRec";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route path="AdminDash" element={<AdminDash/>}>
           <Route index element={<AdminContent/>}/>
           <Route path="admin-dash" element={<AdminContent/>}/>
+          <Route path="studentRecord" element={<StudentRec/>}/>
           <Route path="registered-complaint's" element={<Complaintspg/>}/>
           <Route path="replydash" element={<Replypg/>}/>
         </Route>

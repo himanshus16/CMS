@@ -170,6 +170,11 @@ body{
     width: 100%;
     height: max-content;
 }
+.home-btn{
+    font-size: 20px;
+    color: #07466f;
+    text-decoration: underline;
+}
 .studash-container{
     display: flex;
     padding: 20px;
@@ -250,11 +255,15 @@ body{
     padding: 10px;
     font-size: 17px;
 }
-.Admin-content{
-    margin-left: 50px;
-    padding: 40px;
+#Admin-content{
+    /* margin-left: 100px; */
     width: 100%;
     height: max-content;
+}
+#Admin-content h1,#Admin-content p{
+    margin: auto;
+    width: fit-content;
+    padding: 20px;
 }
 .reply-btn{
     padding: 8px;
@@ -348,6 +357,22 @@ body{
     /* font-size: 18px; */
     font-style: italic;
     text-align-last: center;
+}
+.Student-record-container{
+    width: 100%;
+    background-color: rgb(228, 223, 223);
+}
+.Student-record-container table{
+    width: 80%;
+    border: none;
+    padding: 30px;
+    margin: auto;
+}
+.Student-record-container table tr th,td{
+    border:  1px solid #2c3e50;
+    padding: 10px;
+    font-size: 17px;
+    font-weight: bold;
 }
 .footer{
     border-top: 2px solid #2c3e50;

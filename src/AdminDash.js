@@ -1,15 +1,13 @@
 import { Link, Outlet } from 'react-router-dom'
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { useState } from 'react';
-import { logout, selectStuid, selectUser } from "./Redux/StuSlice";
+import { selectStuid, selectUser } from "./Redux/StuSlice";
 import { useNavigate } from "react-router-dom";
 import LoaderDash from './Loader';
 
 
 const AdminDash = () => {
-
-    const myDispatch = useDispatch();
 
     let name = useSelector(selectUser)
     let id = useSelector(selectStuid)
@@ -38,6 +36,7 @@ const AdminDash = () => {
                     <div id="sidebar">
                         <Link to="admin-dash">Dashboard</Link>
                         <Link to="registered-complaint's">Registered Complaint's</Link>
+                        <Link to="studentRecord">Student Record</Link>
                         <Link>Profile</Link>
                         <Link>Registration request's(Admin)</Link>
                     </div>

@@ -30,38 +30,38 @@ const Form = () => {
                 if (res.data.length == 1 && res.data[0].email == email) {
 
                     let obj = {}
-                        if (res.data[0].password == password) {
-                            obj = {
-                                "name": res.data[0].name,
-                                "idd": res.data[0].stuid
-                            }
-                            if (res.data[0].registerAs != signinAs) {
-                                swal({
-                                    title: "Not Admin!",
-                                    text: "This email not registered as admin...",
-                                    icon: "warning",
-                                  });
-                            }
-                            else{
-                                swal({
-                                    title: "Sucessfully login!",
-                                    text: "",
-                                    icon: "success",
-                                  });
-                                myDispatch(login(obj))
-                                if (res.data[0].registerAs == "Student") {
-                                    myNav("/Studash")
-                                }
-                                else if (res.data[0].registerAs == "Admin") {
-                                    myNav("/AdminDash")
-                                }
-                            }
+                    if (res.data[0].password == password) {
+                        obj = {
+                            "name": res.data[0].name,
+                            "idd": res.data[0].stuid
+                        }
+                        if (res.data[0].registerAs != signinAs) {
+                            swal({
+                                title: "Not Admin!",
+                                text: "This email not registered as admin...",
+                                icon: "warning",
+                            });
                         }
                         else {
-                            document.getElementById("password-label").style.color = "red"
-                            document.getElementById("password-input").value = ""
-                            document.getElementById("password-input").placeholder = "Invalid Password"
+                            swal({
+                                title: "Sucessfully login!",
+                                text: "",
+                                icon: "success",
+                            });
+                            myDispatch(login(obj))
+                            if (res.data[0].registerAs == "Student") {
+                                myNav("/Studash")
+                            }
+                            else if (res.data[0].registerAs == "Admin") {
+                                myNav("/AdminDash")
+                            }
                         }
+                    }
+                    else {
+                        document.getElementById("password-label").style.color = "red"
+                        document.getElementById("password-input").value = ""
+                        document.getElementById("password-input").placeholder = "Invalid Password"
+                    }
                 }
                 else {
                     document.getElementById("email-label").style.color = "red"
@@ -70,7 +70,11 @@ const Form = () => {
                 }
             }
             else {
-                alert("please select 'Sign-in As' field");
+                swal({
+                    title: "Select Sign-in As",
+                    text: "",
+                    icon: "warning",
+                });
             }
 
         })
@@ -100,7 +104,6 @@ const Form = () => {
                     </div>
                     <a href="#">Forgot password</a>
                 </div>
-                {/* } */}
             </div>
         </>
     )
