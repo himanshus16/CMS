@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/himanshus16/CMS/static/css/main.b6c68e47.css",
+    "main.js": "/himanshus16/CMS/static/js/main.43ef0fba.js",
+    "static/media/th.jpeg": "/himanshus16/CMS/static/media/th.314229be3717614fa415.jpeg",
+    "index.html": "/himanshus16/CMS/index.html",
+    "main.b6c68e47.css.map": "/himanshus16/CMS/static/css/main.b6c68e47.css.map",
+    "main.43ef0fba.js.map": "/himanshus16/CMS/static/js/main.43ef0fba.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b6c68e47.css",
+    "static/js/main.43ef0fba.js"
+  ]
+}
